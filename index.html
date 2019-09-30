@@ -60,9 +60,6 @@
 									<h2>Introduction</h2>
 								</header>
 									<p>
-										<!-- Placeholder image -->
-										<!-- TODO: Insert image of Pecky holding a "reasons for logic snap" sheet -->
-										<span class="image right"><img src="images/pic01.jpg" alt=""/></span>
 										The Knowledge Representation and Reasoning approach to Artificial Intelligence uses logics to represent knowledge
 										and automated reasoning methods to draw new conclusions from that knowledge. In classical (monotonic) reasoning systems,
 										all information is certain and adding new information does not change the conclusions that you could previously draw.
@@ -77,7 +74,7 @@
 										<span class="image left"><img src="images/pic01.jpg"/></span>
 									</p>
 									<p>
-										Defeasible (non-monotonic) reasoning systems would allow Pecky to say "typically, birds fly". Then, when Pecky adds
+										Defeasible (non-monotonic) reasoning systems would allow Pecky to say "birds typically fly". Then, when Pecky adds
 										the extra information that "penguins do not fly", the system would retract its previous conclusion that "penguins do
 										fly". Pecky would still exist if she used this "common sense" approach to reasoning.
 									</p>
@@ -122,7 +119,8 @@
 								<p>
 									Truth tables can be used to define the meaning of each boolean operator. And, those meanings are used
 									to reason about propositional statements. The most common question we want to answer is: "Can we
-									conclude that a new statement is true based on the statements that we already know to be true?"
+									conclude that a new statement is true based on the statements that we already know to be true?" This is
+									known as classical entailment.
 								</p>
 								<p>
 									<!-- Placeholder image -->
@@ -142,7 +140,40 @@
 									<h3>The KLM Approach</h3>
 								</header>
 								<p>
-									Lorem ipsum dolor tempus sit cursus.
+									The KLM approach, proposed by Kraus, Lehmann and Magidor, is a well-supported approach to defeasible
+									reasoning. It allows us to represent statements such as "penguins typically fly" using a defeasible
+									implication operator. Statements of this form are known as defeasible statements and normal propositional
+									logic statements are known as classical statements.
+								</p>
+
+								<!-- Placeholder image -->
+								<!-- TODO: Defeasible implicator image? + explanation -->
+								<span class="image fit"><img src="images/pic04.jpg"/></span>
+
+								<p>
+									We now want to be able to answer the question: "Can we conclude that a new defeasible statement is true based
+									on the statements (both defeasible and classical) that we already know to be true?" This is known as defeasible
+									entailment.
+								</p>
+
+								<!-- Placeholder image -->
+								<!-- TODO: Defeasible entailment image? + explanation -->
+								<span class="image fit"><img src="images/pic04.jpg"/></span>
+
+								<p>
+									Unlike classical entailment, defeasible entailment is not unique. To address this the KLM approach provides a
+									list of rationality properties, called the KLM properties. The properties should be satisfied by a suitable
+									defeasible entailment method.
+								</p>
+
+								<!-- Placeholder image -->
+								<!-- TODO: KLM properties on a chalk board? -->
+								<span class="image fit"><img src="images/pic04.jpg"/></span>
+
+								<p>
+									All of these properties have a fairly intuitive meaning. For example; the And property say that, if Pecky knows
+									that "penguins can waddle" and "penguins can belly-slide", then Pecky should be able to conclude that
+									"penguins can waddle and belly-slide".
 								</p>
 
 								<!-- Rational Closure -->
@@ -167,17 +198,15 @@
 									facts from other facts. Disjunctive Datalog rules have the following form:
 								</p>
 
-								<!-- Placeholder image -->
-								<!-- TODO: Insert image of Datalog rule form with arrows explaining-->
-								<span class="image fit"><img src="images/pic04.jpg"/></span>
+								<!-- Image of Datalog rule form with arrows explaining-->
+								<span class="image fit"><img src="images/datalog-rule.png"/></span>
 
 								<p>
 									Facts are rules without a body (the left-hand side). Disjunctive Datalog facts have the following form:
 								</p>
 
-								<!-- Placeholder image -->
-								<!-- TODO: Insert image of Datalog fact form with arrows explaining -->
-								<span class="image fit"><img src="images/pic04.jpg"/></span>
+								<!-- Image of Datalog fact form with arrows explaining -->
+								<span class="image fit"><img src="images/datalog-fact.png"/></span>
 
 								<p>
 									The boolean operators used in Datalog have the same intuitive meaning as for propositional logic. Rules
@@ -193,6 +222,8 @@
 									Using Datalog, Pecky can now say that "Pecky is a penguin", "For all X, if X is a penguin then X waddles or
 									slides" or "For all X, if X is a penguin and lives in the Nothern Hemisphere then X is a Galapogos
 									penguin". However, Pecky cannot use Datalog to say that "For all X, if X is a bird then X typically flies".
+									KLM-style defeasible reasoning needs to be extended to Datalog in order for Pecky to make these type of
+									statements in Datalog.
 								</p>
 							</section>
 
