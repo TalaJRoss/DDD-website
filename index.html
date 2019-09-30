@@ -95,7 +95,7 @@
 										<li><a href="#prop" class="active">Propositional Logic</a></li>
 										<li><a href="#klm">KLM Approach</a></li>
 										<li><a href="#rc">Rational Closure</a></li>
-										<li><a href="#datalog">Datalog</a></li>
+										<li><a href="#datalog">Disjunctive Datalog</a></li>
 									</ul>
 								</nav>
 
@@ -128,9 +128,10 @@
 									<!-- Placeholder image -->
 									<!-- TODO: Insert image of Pecky looking at truth table and saying "So, p -> f and p -> !f. On no!" -->
 									<span class="image right"><img src="images/pic01.jpg"/></span>
-									Using truth tables, Pecky can still logically conclude that "penguins can fly". But, Pecky already
-									knows that "penguins are not fly'ers" and it is impossible for both of these statements to be true.
-									So, Pecky does not exist. To solve this problem we need to make propositional logic defeasible.
+									Using truth tables (or more efficient semantic tableau methods), Pecky can still logically conclude that
+									"penguins can fly". But, Pecky already knows that "penguins are not fly'ers" and it is impossible for both
+									of these statements to be true. So, Pecky does not exist. To solve this problem we need to make propositional
+									logic defeasible.
 								</p>
 								<!-- Placeholder image -->
 								<!-- TODO: Adjust POOF image?" -->
@@ -154,10 +155,44 @@
 
 								<!-- Datalog -->
 								<header id="datalog" class="major">
-									<h3>Datalog</h3>
+									<h3>Disjunctive Datalog</h3>
 								</header>
 								<p>
-									Lorem ipsum dolor tempus sit cursus.
+									Datalog is a more expressive logic than propositional logic. It allows us to represent statements about
+									specific individuals as well as generic concepts, which can be associated with many individuals. For example;
+									Pecky can now say that "Pecky is a penguin" or "for all X, X is a penguin".
+								</p>
+								<p>
+									Datalog is a made up of rules and facts. Facts provide information about the world and rules allow us to deduce
+									facts from other facts. Disjunctive Datalog rules have the following form:
+								</p>
+
+								<!-- Placeholder image -->
+								<!-- TODO: Insert image of Datalog rule form with arrows explaining-->
+								<span class="image fit"><img src="images/pic04.jpg"/></span>
+
+								<p>
+									Facts are rules without a body (the left-hand side). Disjunctive Datalog facts have the following form:
+								</p>
+
+								<!-- Placeholder image -->
+								<!-- TODO: Insert image of Datalog fact form with arrows explaining -->
+								<span class="image fit"><img src="images/pic04.jpg"/></span>
+
+								<p>
+									The boolean operators used in Datalog have the same intuitive meaning as for propositional logic. Rules
+									intuitively mean that, whenever every statement between "and" symbols on the left-hand side of the rule are
+									true, then at least one of the statements between "or" symbols on the right-hand side are true. Facts mean
+									that at least one of the statements between "or" symbols are true.
+								</p>
+								<p>
+									<!-- Placeholder image -->
+									<!-- TODO: Insert image of Pecky saying "P(Pecky), P(X) -> W(X) || S(X), P(X) && N(X) -> G(X)"-->
+									<span class="image right"><img src="images/pic01.jpg"/></span>
+
+									Using Datalog, Pecky can now say that "Pecky is a penguin", "For all X, if X is a penguin then X waddles or
+									slides" or "For all X, if X is a penguin and lives in the Nothern Hemisphere then X is a Galapogos
+									penguin". However, Pecky cannot use Datalog to say that "For all X, if X is a bird then X typically flies".
 								</p>
 							</section>
 
@@ -209,7 +244,9 @@
 								</p>
 								<ol>
 									<li>
-										The KLM properties can be extended to the Datalog case in a manner that retains their intended meaning. (Joint work)
+										The KLM properties can be extended to the Datalog case by using an extended version of
+										the Datalog logic to express the properties. The extension retains the intended meaning of the
+										original properties. (Joint work)
 									</li>
 									<li>
 										The extended Rational Closure algorithm satisfies the KLM properties for Datalog. (Joint work)
