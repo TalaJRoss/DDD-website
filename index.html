@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <!--
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
@@ -79,160 +79,174 @@
 							</section>
 
 						<!-- Background -->
-							<section id="background" class="main">
-								<header class="major">
-									<h2>Background</h2>
-								</header>
+                            <section id="background" class="main">
+                                <header class="major">
+                                    <h2>Background</h2>
+                                </header>
 
-								<!-- Navigation to each subsection -->
-								<nav id="nav-back">
-									<ul>
-										<li><a href="#prop" class="active">Propositional Logic</a></li>
-										<li><a href="#klm">KLM Approach</a></li>
-										<li><a href="#rc">Rational Closure</a></li>
-										<li><a href="#datalog">Disjunctive Datalog</a></li>
-									</ul>
-								</nav>
+                                <!-- Navigation to each subsection -->
+                                <nav id="nav-back">
+                                    <ul>
+                                        <li><a href="#prop" class="active">Propositional Logic</a></li>
+                                        <li><a href="#klm">KLM Approach</a></li>
+                                        <li><a href="#rc">Rational Closure</a></li>
+                                        <li><a href="#lc">Lexicographic/Relevant Closure</a></li>
+                                        <li><a href="#datalog">Disjunctive Datalog</a></li>
+                                    </ul>
+                                </nav>
 
-								<!-- Propositional Logic -->
-								<header id="prop" class="major">
-									<h3>Propositional Logic</h3>
-								</header>
-								<p>
-									Propositional logic is a simple logic which uses classical reasoning. It uses symbols to represent base
-									statements that can be assigned a value of true or false. Boolean operators are used to combine these
-									base statements to form more complex statements.
-									<span class="image right"><img src="images/prop-operators.png"/></span>
-								</p>
-								<p>
-									Pecky uses the symbols p, b and f to represent penguins, birds and flying, respectively. Then, Pecky combines
-									these symbols using boolean operators to make the statements "birds can fly", "penguins are birds" and
-									"penguins can not fly".
-									<span class="image left"><img src="images/penguin-prop-statements.png"/></span>
-								</p>
-								<p>
-									Truth tables can be used to define the meaning of each boolean operator. And, those meanings are used
-									to reason about propositional statements. The most common question we want to answer is: "Can we
-									conclude that a new statement is true based on the statements that we already know to be true?" This is
-									known as classical entailment.
-								</p>
-								<p>
-									<span class="image right"><img src="images/penguin-oh-no.png"/></span>
-									Using truth tables (or more efficient semantic tableau methods), Pecky can still logically conclude that
-									"penguins can fly". But, Pecky already knows that "penguins are not fly'ers" and it is impossible for both
-									of these statements to be true. So, Pecky does not exist. To solve this problem we need to make propositional
-									logic defeasible.
-								</p>
+                                <!-- Propositional Logic -->
+                                <header id="prop" class="major">
+                                    <h3>Propositional Logic</h3>
+                                </header>
+                                <p>
+                                    Propositional logic is a simple logic which uses classical reasoning. It uses symbols to represent base
+                                    statements that can be assigned a value of true or false. Boolean operators are used to combine these
+                                    base statements to form more complex statements.
+                                    <span class="image right"><img src="images/prop-operators.png" /></span>
+                                </p>
+                                <p>
+                                    Pecky uses the symbols p, b and f to represent penguins, birds and flying, respectively. Then, Pecky combines
+                                    these symbols using boolean operators to make the statements "birds can fly", "penguins are birds" and
+                                    "penguins can not fly".
+                                    <span class="image left"><img src="images/penguin-prop-statements.png" /></span>
+                                </p>
+                                <p>
+                                    Truth tables can be used to define the meaning of each boolean operator. And, those meanings are used
+                                    to reason about propositional statements. The most common question we want to answer is: "Can we
+                                    conclude that a new statement is true based on the statements that we already know to be true?" This is
+                                    known as classical entailment.
+                                </p>
+                                <p>
+                                    <span class="image right"><img src="images/penguin-oh-no.png" /></span>
+                                    Using truth tables (or more efficient semantic tableau methods), Pecky can still logically conclude that
+                                    "penguins can fly". But, Pecky already knows that "penguins are not fly'ers" and it is impossible for both
+                                    of these statements to be true. So, Pecky does not exist. To solve this problem we need to make propositional
+                                    logic defeasible.
+                                </p>
 
-								<!-- The KLM Approach -->
-								<header id="klm" class="major">
-									<h3>The KLM Approach</h3>
-								</header>
-								<p>
-									The KLM approach, proposed by Kraus, Lehmann and Magidor, is a well-supported approach to defeasible
-									reasoning. It allows us to represent statements such as "penguins typically fly" using a defeasible
-									implication operator. Statements of this form are known as defeasible statements and normal propositional
-									logic statements are known as classical statements.
-								</p>
+                                <!-- The KLM Approach -->
+                                <header id="klm" class="major">
+                                    <h3>The KLM Approach</h3>
+                                </header>
+                                <p>
+                                    The KLM approach, proposed by Kraus, Lehmann and Magidor, is a well-supported approach to defeasible
+                                    reasoning. It allows us to represent statements such as "penguins typically fly" using a defeasible
+                                    implication operator. Statements of this form are known as defeasible statements and normal propositional
+                                    logic statements are known as classical statements.
+                                </p>
 
-								<span class="image fit"><img src="images/twiddle.png"/></span>
+                                <span class="image fit"><img src="images/twiddle.png" /></span>
 
-								<p>
-									We now want to be able to answer the question: "Can we conclude that a new defeasible statement is true based
-									on the statements (both defeasible and classical) that we already know to be true?" This is known as defeasible
-									entailment.
-								</p>
+                                <p>
+                                    We now want to be able to answer the question: "Can we conclude that a new defeasible statement is true based
+                                    on the statements (both defeasible and classical) that we already know to be true?" This is known as defeasible
+                                    entailment.
+                                </p>
 
-								<span class="image fit"><img src="images/defeasible-entailment.png"/></span>
+                                <span class="image fit"><img src="images/defeasible-entailment.png" /></span>
 
-								<p>
-									Unlike classical entailment, defeasible entailment is not unique. To address this the KLM approach provides a
-									list of rationality properties, called the KLM properties. The properties should be satisfied by a suitable
-									defeasible entailment method.
-								</p>
+                                <p>
+                                    Unlike classical entailment, defeasible entailment is not unique. To address this the KLM approach provides a
+                                    list of rationality properties, called the KLM properties. The properties should be satisfied by a suitable
+                                    defeasible entailment method.
+                                </p>
 
-								<!-- Placeholder image -->
-								<!-- TODO: KLM properties on a chalk board? -->
-								<span class="image fit"><img src="images/klm.png"/></span>
+                                <!-- Placeholder image -->
+                                <!-- TODO: KLM properties on a chalk board? -->
+                                <span class="image fit"><img src="images/klm.png" /></span>
 
-								<p>
-									All of these properties have a fairly intuitive meaning. For example; the And property say that, if Pecky knows
-									that "penguins can waddle" and "penguins can belly-slide", then Pecky should be able to conclude that
-									"penguins can waddle and belly-slide".
-								</p>
+                                <p>
+                                    All of these properties have a fairly intuitive meaning. For example; the And property say that, if Pecky knows
+                                    that "penguins can waddle" and "penguins can belly-slide", then Pecky should be able to conclude that
+                                    "penguins can waddle and belly-slide".
+                                </p>
 
-								<!-- Rational Closure -->
-								<header id="rc" class="major">
-									<h3>Rational Closure</h3>
-								</header>
-								<p>
-									Rational closure is the most simple and intuitive way of defining defeasible entailment. There is a semantic definition
-									of Rational Closure and an equivalent algorithmic definition. For this project we use the algorithmic definition as the
-									sole definition of Rational Closure.
-								</p>
+                                <!-- Rational Closure -->
+                                <header id="rc" class="major">
+                                    <h3>Rational Closure</h3>
+                                </header>
+                                <p>
+                                    Rational closure is the most simple and intuitive way of defining defeasible entailment. There is a semantic definition
+                                    of Rational Closure and an equivalent algorithmic definition. For this project we use the algorithmic definition as the
+                                    sole definition of Rational Closure.
+                                </p>
 
-								<p>
-									This algorithm is split into two distinct sub-algorithms: Base Rank and Rational Closure. (A detailed, formal description
-									of these algorithms is found in the full paper.) The Base Rank algorithm ranks all known statements according to
-									typicality. Intuitively, more general statements will appear higher up in the ranking and more specific statements
-									will appear lower down.
-								</p>
+                                <p>
+                                    This algorithm is split into two distinct sub-algorithms: Base Rank and Rational Closure. (A detailed, formal description
+                                    of these algorithms is found in the full paper.) The Base Rank algorithm ranks all known statements according to
+                                    typicality. Intuitively, more general statements will appear higher up in the ranking and more specific statements
+                                    will appear lower down.
+                                </p>
 
-								<p>
-									The Rational Closure algorithm uses the ranking of known statements to check whether we can conclude our the query
-									statement from the known statements. When the left-hand side of our query statement is false, according to known
-									statements, then the query statement is trivially true. So, we remove the least typical layer in the ranking, since
-									some of the statements in this layer must be causing the left-hand side to be false.
-								</p>
+                                <p>
+                                    The Rational Closure algorithm uses the ranking of known statements to check whether we can conclude our the query
+                                    statement from the known statements. When the left-hand side of our query statement is false, according to known
+                                    statements, then the query statement is trivially true. So, we remove the least typical layer in the ranking, since
+                                    some of the statements in this layer must be causing the left-hand side to be false.
+                                </p>
 
-								<p>
-									When the left-hand side of our query statement is true, given the remaining ranked statements, then the query
-									statement may be false. So, we need to check whether the query statement is true, given the remaining statements.
-									If it is then we can conclude that it is true in our world; otherwise we conclude that the query is false.
-								</p>
+                                <p>
+                                    When the left-hand side of our query statement is true, given the remaining ranked statements, then the query
+                                    statement may be false. So, we need to check whether the query statement is true, given the remaining statements.
+                                    If it is then we can conclude that it is true in our world; otherwise we conclude that the query is false.
+                                </p>
 
-								<!-- Datalog -->
-								<header id="datalog" class="major">
-									<h3>Disjunctive Datalog</h3>
-								</header>
-								<p>
-									Datalog is a more expressive logic than propositional logic. It allows us to represent statements about
-									specific individuals as well as generic concepts, which can be associated with many individuals. For example;
-									Pecky can now say that "Pecky is a penguin" or "for all X, X is a penguin".
-								</p>
-								<p>
-									Datalog is a made up of rules and facts. Facts provide information about the world and rules allow us to deduce
-									facts from other facts. Disjunctive Datalog rules have the following form:
-								</p>
+                                <!-- Lexicographic/Relevant Closure -->
+                                <header id="lc" class="major">
+                                    <h3>Lexicographic/Relevant Closure</h3>
+                                </header>
+                                <p>
+                                    In Lexicographic Closure, instead of throwing away the entire top level of statements, we throw away the fewest number of statements possible.
+                                    The fewest number of statements is calculated by considering all possible subsets of the statements.
+                                </p>
+                                <p>
+                                    In Relevant Closure, we only consider throwing away 'relevant' statements. Relevance is determined by which statements are responsible for showing
+                                    the left hand side of the query to be exceptional.
+                                </p>
 
-								<!-- Image of Datalog rule form with arrows explaining-->
-								<span class="image fit"><img src="images/datalog-rule.png"/></span>
+                                <!-- Datalog -->
+                                <header id="datalog" class="major">
+                                    <h3>Disjunctive Datalog</h3>
+                                </header>
+                                <p>
+                                    Datalog is a more expressive logic than propositional logic. It allows us to represent statements about
+                                    specific individuals as well as generic concepts, which can be associated with many individuals. For example;
+                                    Pecky can now say that "Pecky is a penguin" or "for all X, X is a penguin".
+                                </p>
+                                <p>
+                                    Datalog is a made up of rules and facts. Facts provide information about the world and rules allow us to deduce
+                                    facts from other facts. Disjunctive Datalog rules have the following form:
+                                </p>
 
-								<p>
-									Facts are rules without a body (the left-hand side). Disjunctive Datalog facts have the following form:
-								</p>
+                                <!-- Image of Datalog rule form with arrows explaining-->
+                                <span class="image fit"><img src="images/datalog-rule.png" /></span>
 
-								<!-- Image of Datalog fact form with arrows explaining -->
-								<span class="image fit"><img src="images/datalog-fact.png"/></span>
+                                <p>
+                                    Facts are rules without a body (the left-hand side). Disjunctive Datalog facts have the following form:
+                                </p>
 
-								<p>
-									The boolean operators used in Datalog have the same intuitive meaning as for propositional logic. Rules
-									intuitively mean that, whenever every statement between "and" symbols on the left-hand side of the rule are
-									true, then at least one of the statements between "or" symbols on the right-hand side are true. Facts mean
-									that at least one of the statements between "or" symbols are true.
-								</p>
-								<p>
-									<!-- Placeholder image -->
-									<!-- TODO: Insert image of Pecky saying "P(Pecky), P(X) -> W(X) || S(X), P(X) && N(X) -> G(X)"-->
-									<span class="image right"><img src="images/pic01.jpg"/></span>
+                                <!-- Image of Datalog fact form with arrows explaining -->
+                                <span class="image fit"><img src="images/datalog-fact.png" /></span>
 
-									Using Datalog, Pecky can now say that "Pecky is a penguin", "For all X, if X is a penguin then X waddles or
-									slides" or "For all X, if X is a penguin and lives in the Nothern Hemisphere then X is a Galapogos
-									penguin". However, Pecky cannot use Datalog to say that "For all X, if X is a bird then X typically flies".
-									KLM-style defeasible reasoning needs to be extended to Datalog in order for Pecky to make these type of
-									statements in Datalog.
-								</p>
-							</section>
+                                <p>
+                                    The boolean operators used in Datalog have the same intuitive meaning as for propositional logic. Rules
+                                    intuitively mean that, whenever every statement between "and" symbols on the left-hand side of the rule are
+                                    true, then at least one of the statements between "or" symbols on the right-hand side are true. Facts mean
+                                    that at least one of the statements between "or" symbols are true.
+                                </p>
+                                <p>
+                                    <!-- Placeholder image -->
+                                    <!-- TODO: Insert image of Pecky saying "P(Pecky), P(X) -> W(X) || S(X), P(X) && N(X) -> G(X)"-->
+                                    <span class="image right"><img src="images/pic01.jpg" /></span>
+
+                                    Using Datalog, Pecky can now say that "Pecky is a penguin", "For all X, if X is a penguin then X waddles or
+                                    slides" or "For all X, if X is a penguin and lives in the Nothern Hemisphere then X is a Galapogos
+                                    penguin". However, Pecky cannot use Datalog to say that "For all X, if X is a bird then X typically flies".
+                                    KLM-style defeasible reasoning needs to be extended to Datalog in order for Pecky to make these type of
+                                    statements in Datalog.
+                                </p>
+                            </section>
 
 						<!-- Objectives -->
 							<section id="objectives" class="main">
@@ -356,7 +370,7 @@
 									<!-- Author: Matthew Morris -->
 									<li>
 										<!-- Placeholder image: -->
-										<span class="image fit"><img src="images/matt-profile.jpg" alt="Head shot of Matthew Morris"/></span>
+										<span class="image fit"><img src="images/matt-profile.jpg" alt="Head shot of Matthew Morris" style="width:300px;height:300px;border-radius:50%;"/></span>
 										<h2>Matthew Morris</h2>
 										<h3>Author</h3>
 										<!-- <p>
@@ -377,7 +391,7 @@
 									<!-- Author: Tala Ross -->
 									<li>
 										<!-- Placeholder image: -->
-										<span class="image fit"><img src="images/tala-profile.jpg" alt="Head shot of Tala Ross"/></span>
+										<span class="image fit"><img src="images/tala-profile.jpg" alt="Head shot of Tala Ross" style="width:300px;height:300px;border-radius:50%;"/></span>
 										<h2>Tala Ross</h2>
 										<h3>Author</h3>
 										<!-- <p>
@@ -398,7 +412,7 @@
 									<!-- Supervisor: Tommie Meyer -->
 									<li>
 											<!-- Placeholder image: -->
-											<span class="image fit"><img src="images/tommie-profile.jpg" alt="Head shot of Tommie Meyer"/></span>
+											<span class="image fit"><img src="images/tommie-profile.jpg" alt="Head shot of Tommie Meyer" style="width:300px;height:300px;border-radius:50%;"/></span>
 											<h2>Tommie Meyer</h2>
 											<h3>Supervisor</h3>
 											<!-- <p>
