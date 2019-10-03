@@ -2433,6 +2433,35 @@ input, select, textarea {
 				width: 100%;
 			}
 
+		.image.fit-ish {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+
+			.image.fit-ish img {
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+			}
+
+			@media screen and (max-width: 980px) {
+
+					.image.fit-ish img {
+						width: 80%;
+					}
+
+			}
+
+			@media screen and (max-width: 736px) {
+
+					.image.fit-ish img {
+						width: 100%;
+					}
+
+			}
+
 		.image.main {
 			display: block;
 			margin: 0 0 3em 0;
